@@ -82,7 +82,7 @@ void Demo::render() {
 	commandList->OMSetRenderTargets(1, &descHandleRtv, FALSE, &descHandleDepthStencil);
 
 	// Clear the render target by using the ClearRenderTargetView command
-	static float clearColor[]{ 1.1f, 0.1f, 0.1f, 1.0f };
+	static float clearColor[]{ 0.1f, 0.1f, 0.1f, 1.0f };
 	commandList->ClearRenderTargetView(descHandleRtv, clearColor, 0, nullptr);
 	commandList->ClearDepthStencilView(descHeapDepthStencil->GetCPUDescriptorHandleForHeapStart(), D3D12_CLEAR_FLAG_DEPTH, 1.0f, 0, 0, nullptr);
 

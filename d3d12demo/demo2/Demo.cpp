@@ -14,28 +14,22 @@ Demo::Demo(UINT bufferCount, string name, LONG width, LONG height) :DGraphics{ b
 	//points 
 	std::vector<DirectX::XMFLOAT3> points{ { 0.0f, 0.5f, 0.5f } ,{ 0.5f, -0.5f, 0.5f },{ -0.5f, -0.5f, 0.5f } };	
 	
-	std::vector<uint32_t> indices{ 0,1,2 };
-	
+
 	using PointType = decltype(points)::value_type;
 
 	vertexBuffer = DemoUtil::createVertexBuffer(device.Get(), points, L"vertices of triangle");
-	indexBuffer = DemoUtil::createIndexBuffer(device.Get(), indices, L"indices of triangle");
-
+	
 	vertexBufferView.BufferLocation = vertexBuffer->GetGPUVirtualAddress();
 	vertexBufferView.StrideInBytes = static_cast<UINT>(sizeof(PointType));
 	vertexBufferView.SizeInBytes = static_cast<UINT>(vertexBufferView.StrideInBytes * points.size());
-
-	indexBufferView.BufferLocation = indexBuffer->GetGPUVirtualAddress();
-	indexBufferView.Format = DXGI_FORMAT_R32_UINT;
-	indexBufferView.SizeInBytes = static_cast<UINT>(indices.size() * sizeof(uint32_t));
 
 	createShaders();  // create shaders
 	createRootSignature();  // create root signatures
 
 	// we create two pipeline states 
-	createPipelineStateWireframe();
-	createPipelineStateSolid();
 
+	createPipelineStateWireframe();  // wireframe
+	createPipelineStateSolid();      // solid
 
 	createViewport();
 	createScissorRect();

@@ -6,3 +6,8 @@ d3d12demo/x64/
 d3d12demo/.vs/d3d12demo/v14/.suo
 d3d12demo/d3d12demo.VC.VC.opendb
 d3d12demo/demo2/x64/
+d3d12demo/demo2-color/
+d3d12demo/demo2-sq/
+d3d12demo/demo3/x64/
+d3d12demo/demo3/demo3.vcxproj.filters
+*.cso
