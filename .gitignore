@@ -11,3 +11,8 @@ d3d12demo/demo2-sq/
 d3d12demo/demo3/x64/
 d3d12demo/demo3/demo3.vcxproj.filters
 *.cso
+d3d12demo/d3d11demo1/x64/
+d3d12demo/d3d11demo1/d3d11demo1.vcxproj.filters
+d3d12demo/d3d11demo2/d3d11demo2.vcxproj.filters
+d3d12demo/d3d11demo2/x64/
+d3d12demo/d3d11demo2-sq/
