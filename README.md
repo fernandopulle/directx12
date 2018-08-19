@@ -1,4 +1,3 @@
 # directx12
-sample directx codes
+sample directx source codes.
 
-This is sample source codes.
