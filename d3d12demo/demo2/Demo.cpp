@@ -12,7 +12,10 @@ using namespace DirectX;
 Demo::Demo(UINT bufferCount, string name, LONG width, LONG height) :DGraphics{ bufferCount, name, width, height } {
 
 	//points 
-	std::vector<DirectX::XMFLOAT3> points{ { 0.0f, 0.5f, 0.5f } ,{ 0.5f, -0.5f, 0.5f },{ -0.5f, -0.5f, 0.5f } };	
+	std::vector<DirectX::XMFLOAT3> points{ 
+		{ 0.0f, 0.5f, 0.5f } ,
+		{ 0.5f, -0.5f, 0.5f },
+		{ -0.5f, -0.5f, 0.5f } };	
 	
 
 	using PointType = decltype(points)::value_type;
